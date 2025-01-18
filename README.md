@@ -1,69 +1,98 @@
-# AI-Powered Decentralized Task Marketplace
+# Decentralized AI Task Marketplace
 
 ## Project Overview
-This MVP demonstrates a decentralized task marketplace leveraging AI and blockchain technologies, enabling secure task creation, freelancer recommendations, and payment processing.
+An innovative platform combining AI-powered freelancer recommendations with blockchain technology to revolutionize task outsourcing and freelance work management.
 
-## Technologies Used
-- **Blockchain**: Ethereum Sepolia Testnet
+## Technologies Stack
+- **Blockchain**: Ethereum (Sepolia Testnet)
 - **Smart Contracts**: Solidity, OpenZeppelin
-- **Backend**: Django, Python
-- **Frontend**: React.js
-- **AI**: TensorFlow
-- **Blockchain Connectivity**: Alchemy
+- **Backend**: Django REST Framework
+- **Frontend**: ReactJS (Planned)
+- **AI**: Scikit-learn, TensorFlow
+- **Blockchain Connectivity**: Web3.py, Alchemy
 
-## Prerequisites
-- Python 3.9+
-- Node.js 16+
-- MetaMask Browser Extension
-- Alchemy Account
-- Sepolia Testnet ETH
-
-## Setup Instructions
-
-### 1. Blockchain Setup
-1. Create an Alchemy account
-2. Create a Sepolia Testnet project
-3. Get your Alchemy API key
-4. Fund your MetaMask wallet with Sepolia testnet ETH
-
-### 2. Backend Setup
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+## Project Structure
+```
+decentralized_ai_marketplace/
+│
+├── .env                  # Environment variables (not tracked in git)
+├── venv/                 # Virtual environment
+│
+└── ai_task_marketplace/
+    ├── backend/          # Django backend
+    │   ├── ai_models/    # AI recommendation system
+    │   ├── tasks/        # Task management
+    │   ├── users/        # User management
+    │   └── blockchain/   # Blockchain integration
+    │
+    ├── frontend/         # ReactJS frontend (planned)
+    │   ├── src/
+    │   │   ├── components/
+    │   │   ├── services/
+    │   │   └── blockchain/
+    │
+    └── smart_contracts/  # Solidity smart contracts
 ```
 
-### 3. Frontend Setup
-```bash
-cd frontend
-npm install
-npm start
-```
+## Current Development Status
 
-### 4. Smart Contract Deployment
-```bash
-cd smart_contracts
-npx hardhat compile
-npx hardhat run scripts/deploy.js --network sepolia
-```
+### Completed
+- [x] Backend data models
+- [x] Basic AI recommendation system
+- [x] Synthetic data generation
+- [x] Project structure setup
 
-### 5. AI Model Training
-```bash
-cd ai_models
-python train_models.py
-```
+### Pending
+- [ ] Smart contract development
+- [ ] Blockchain integration
+- [ ] Frontend implementation
+- [ ] Advanced AI recommendation model
+- [ ] Work validation model
 
-## Environment Variables
-Create `.env` files in respective directories with:
-- `ALCHEMY_API_KEY`
-- `PRIVATE_KEY`
-- `SEPOLIA_RPC_URL`
+## Setup and Installation
 
-## Running Tests
-- Backend: `python manage.py test`
-- Frontend: `npm test`
-- Smart Contracts: `npx hardhat test`
+### Prerequisites
+- Python 3.8+
+- pip
+- virtualenv
+
+### Steps
+1. Clone the repository
+2. Create virtual environment
+   ```bash
+   python -m venv ../venv
+   ```
+
+3. Activate virtual environment
+   - Windows:
+     ```
+     ..\venv\Scripts\activate
+     ```
+   - macOS/Linux:
+     ```
+     source ../venv/bin/activate
+     ```
+
+4. Install dependencies
+   ```bash
+   pip install -r backend/requirements.txt
+   ```
+
+5. Set up environment variables
+   - Copy `.env.example` to `.env`
+   - Fill in required configuration
+
+6. Run migrations
+   ```bash
+   python backend/manage.py migrate
+   ```
+
+## Development Roadmap
+1. Complete smart contract development
+2. Implement blockchain connectivity
+3. Enhance AI recommendation system
+4. Develop work validation model
+5. Build comprehensive frontend
 
 ## Contributing
 1. Fork the repository
@@ -73,7 +102,13 @@ Create `.env` files in respective directories with:
 5. Create a Pull Request
 
 ## License
-MIT License
+This project is licensed under the MIT License.
 
-## Disclaimer
-This is an MVP for demonstration purposes. Not intended for production use.
+## Contact
+[Your Contact Information]
+
+## Acknowledgments
+- OpenZeppelin
+- Alchemy
+- Django REST Framework
+- Scikit-learn Community
